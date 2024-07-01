@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #faf3e0;
+            color: #4b2e2e;
+            margin: 0;
+            padding: 20px;
+        }
+        .letter-container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border: 2px solid #d4af37;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 1s ease, max-height 1s ease;
+        }
+        .letter-container.visible {
+            opacity: 1;
+            max-height: 1000px; /* Adjust as needed */
+        }
+        h1 {
+            text-align: center;
+            color: #b5651d;
+            font-family: 'Courier New', monospace;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .signature {
+            text-align: right;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        .mail-icon {
+            display: block;
+            margin: 0 auto;
+            font-size: 50px;
+            color: #b5651d;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .open-button {
+            background-color: gray;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .open-button:hover {
+            background-color: #8b4513;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="open-button" onclick="showLetter()">
+            <i class='bx bxs-envelope mail-icon'></i> Open Letter
+        </button>
+    </div>
+    <div class="letter-container" id="letter">
+        <h1>To My Dearest Lexi,</h1>
+        <p>
+            I can't help but smile every time I think about you. Your laughter, your kindness, and your beautiful smile bring so much joy to my life. 
+            I cherish every moment we spend together, and I find myself longing for the times when I can hold you close and feel your warmth.
+        </p>
+        <p>
+            Lexi, you are my sunshine on a cloudy day, my comfort in times of need, and my greatest joy. When we snuggle, I feel the world fade away, and it's just you and me, lost in each other's embrace. 
+            The way you look at me with those sparkling eyes makes my heart skip a beat, and I am overwhelmed with love and adoration for you.
+        </p>
+        <p>
+            I dream of the moments when I can give you gentle kisses and leave a little mark of my affection, a sign of how deeply I care for you. I want to be close to you, to feel your heartbeat next to mine, and to create memories that we will treasure forever.
+        </p>
+        <p>
+            My love for you grows stronger with each passing day, and I am so grateful to have you in my life. You are my everything, Lexi, and I can't wait to share many more wonderful moments with you.
+        </p>
+        <p class="signature">
+            Forever yours,<br>
+            Zakky
+        </p>
+    </div>
+
+    <script>
+        function showLetter() {
+            const letter = document.getElementById('letter');
+            letter.classList.add('visible');
+        }
+    </script>
+</body>
+</html>
